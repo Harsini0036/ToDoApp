@@ -11,6 +11,7 @@ window.onload = () => {
 };
 
 button.addEventListener("click", () => {
+  if (input.value === "") return;
   todos.push(input.value);
   localStorage.setItem("todos", JSON.stringify(todos));
   addtodo(input.value);
